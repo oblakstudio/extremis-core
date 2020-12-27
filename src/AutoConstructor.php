@@ -59,11 +59,13 @@ final class AutoConstructor
 
         foreach ($classnames as $classname) :
 
-            $exploded = explode('\\', $classname);
+            $exploded  = explode('\\', $classname);
+            $class     = strtolower(array_pop($exploded));
+            $namespace = strtolower(array_pop($exploded));
 
             $output .= sprintf(
                 "    '%s' => '%s',\n",
-                strtolower(array_pop($exploded)),
+                "{$namespace}-{$class}",
                 $classname
             );
 
