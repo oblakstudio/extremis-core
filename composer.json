@@ -2,7 +2,7 @@
     "name": "oblak/extremis-core",
     "description": "Core files for Extremis",
     "license": "GPL-2.0-or-later",
-    "version": "2.0",
+    "version": "2.1",
     "autoload": {
         "psr-4": {
             "Extremis\\": "src/"
