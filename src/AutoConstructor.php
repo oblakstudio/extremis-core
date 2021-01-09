@@ -57,7 +57,11 @@ final class AutoConstructor
 
         $output = "<?php\n\nreturn [\n" ;
 
+        $excludes = require_once "{$vendorDir}/../config/excludes.php";
+
         foreach ($classnames as $classname) :
+
+            if (in_array($classname, $excludes)) continue;
 
             $exploded  = explode('\\', $classname);
             $class     = strtolower(array_pop($exploded));
