@@ -2,17 +2,14 @@
     "name": "oblak/extremis-core",
     "description": "Core files for Extremis",
     "license": "GPL-2.0-or-later",
-    "version": "2.1",
+    "version": "2.2",
     "autoload": {
         "psr-4": {
             "Extremis\\": "src/"
         }
     },
     "require" : {
-        "composer/installers": "~1.0",
-        "illuminate/view": "~6.20.9",
-        "illuminate/config": "~6.20.9",
-        "illuminate/support": "~6.20.9"
-
+        "illuminate/config": "^8",
+        "illuminate/support": "^8"
     }
 }
