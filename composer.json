@@ -9,7 +9,6 @@
         }
     },
     "require" : {
-        "illuminate/container": "^8.35",
         "illuminate/config": "^8.35"
     }
 }

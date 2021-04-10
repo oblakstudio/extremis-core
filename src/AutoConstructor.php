@@ -1,4 +1,4 @@
-<?php strict_types: 1;
+<?php
 
 namespace Extremis;
 
