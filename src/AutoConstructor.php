@@ -10,6 +10,10 @@ use Composer\Script\Event;
 final class AutoConstructor
 {
 
+    private static $excludes;
+
+    private static $io;
+
     /**
      * Generates modules classmap file
      *
@@ -20,10 +24,13 @@ final class AutoConstructor
     {
 
         $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
+        self::$io  = $event->getIO();
+
+        self::$excludes = require_once dirname($vendorDir) . '/config/excludes.php';
 
         $classnames = array_keys(array_filter(
             require_once $vendorDir . '/composer/autoload_classmap.php',
-            ['self', 'filterClassnameArray'],
+            ['Extremis\\AutoConstructor', 'filterClassnameArray'],
             ARRAY_FILTER_USE_BOTH
         ));
 
@@ -35,14 +42,29 @@ final class AutoConstructor
 
     /**
      * Filters Extremis classes in framework folder from other classes
-     * 
+     *
      * @param  string $path      Vendor directory path
      * @param  string $classname Class name to check
      * @return bool              True if Extremis class in framework folder, false if not
      */
     public static function filterClassnameArray(string $path, string $classname)
     {
-        return ( (strpos($classname, 'Extremis') !== false) && (strpos($path, 'framework') !== false) );
+
+        $is_extremis = (
+            (strpos($classname, 'Extremis') !== false) &&
+            (strpos($path, 'framework') !== false) &&
+            (strpos($classname, 'Abstract') === false) &&
+            (strpos($classname, 'Interface') === false)
+        );
+
+        if (!$is_extremis) :
+            return false;
+        endif;
+
+        $is_excluded = in_array($classname, self::$excludes);
+
+        return !$is_excluded;
+
     }
 
     /**
