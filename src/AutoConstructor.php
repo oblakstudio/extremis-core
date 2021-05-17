@@ -54,7 +54,8 @@ final class AutoConstructor
             (strpos($classname, 'Extremis') !== false) &&
             (strpos($path, 'framework') !== false) &&
             (strpos($classname, 'Abstract') === false) &&
-            (strpos($classname, 'Interface') === false)
+            (strpos($classname, 'Interface') === false) &&
+            (strpos($classname, 'Trait') === false)
         );
 
         if (!$is_extremis) :
