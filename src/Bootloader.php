@@ -20,14 +20,12 @@ class Bootloader
     private function initModules()
     {
         foreach ($this->modules as $name => $class) :
-            $this->modules[$name] = new $class;
+            $this->modules[$name] = new $class();
         endforeach;
-
     }
 
     public function getModule(string $module)
     {
         return $this->modules[$module];
     }
-
 }

@@ -20,7 +20,7 @@ final class AutoConstructor
      * @param  Event $event
      * @return int
      */
-    public static function run(Event $event) : int
+    public static function run(Event $event): int
     {
 
         $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
@@ -37,7 +37,6 @@ final class AutoConstructor
         return (self::generateIncludeFile($classnames, $vendorDir))
             ? 1
             : 0;
-
     }
 
     /**
@@ -65,7 +64,6 @@ final class AutoConstructor
         $is_excluded = in_array($classname, self::$excludes);
 
         return !$is_excluded;
-
     }
 
     /**
@@ -78,26 +76,36 @@ final class AutoConstructor
     public static function generateIncludeFile(array $classnames, string $vendorDir)
     {
 
-        $output = "<?php\n\nreturn [\n" ;
+        $output = "<?php\n/**\n * Extremis Modules\n *\n * @package Extremis\n */\n\nreturn array(\n" ;
 
-        foreach ($classnames as $classname) :
+        $max_length = array_reduce($classnames, function ($carry, $classname) {
+            $length = strlen(self::getClassPath($classname));
 
-            $exploded  = explode('\\', $classname);
-            $class     = strtolower(array_pop($exploded));
-            $namespace = strtolower(array_pop($exploded));
+            return ($length > $carry) ? $length : $carry;
+        }, 0);
+
+        foreach ($classnames as $classname) {
+            $class_path = self::getClassPath($classname);
 
             $output .= sprintf(
-                "    '%s' => '%s',\n",
-                "{$namespace}-{$class}",
-                $classname
+                "    '%s'%s => '%s',\n",
+                $class_path,
+                str_repeat(' ', $max_length - strlen($class_path)),
+                str_replace('\\', '\\\\', $classname)
             );
+        }
 
-        endforeach;
-
-        $output .= "];";
+        $output .= ");\n";
 
         return file_put_contents("{$vendorDir}/../config/modules.php", $output);
-
     }
 
+    private static function getClassPath(string $classname): string
+    {
+        $exploded   = explode('\\', $classname);
+        $class      = strtolower(array_pop($exploded));
+        $namespace  = strtolower(array_pop($exploded));
+
+        return "{$namespace}-{$class}";
+    }
 }
