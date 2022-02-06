@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/oblakstudio/extremis-core/compare/v1.0.0...v1.1.0) (2022-02-06)
+
+
+### Features
+
+* Improved generated modules file ([4567c4c](https://github.com/oblakstudio/extremis-core/commit/4567c4c067bcafd06f79b9f05b7c0d009c69cfdf))
+
 # 1.0.0 (2021-05-17)
 
 
