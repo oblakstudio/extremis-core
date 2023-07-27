@@ -5,11 +5,28 @@
     "version": "1.0.0",
     "autoload": {
         "psr-4": {
-            "Extremis\\": "src/"
-        }
+            "Extremis\\": "src"
+        },
+        "files": [
+            "/src/Utils/extremis-helpers.php"
+        ]
     },
-    "require" : {
-        "illuminate/config": "^8.35",
-        "illuminate/container": "^8.37"
+    "require": {
+        "php": ">=8.0",
+        "oblak/wp-asset-loader": "^2.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "wp-coding-standards/wpcs": "^2",
+        "phpcompatibility/phpcompatibility-wp": "^2"
+    },
+    "suggest": {
+        "oblak/composer-autoconstructor-plugin": "Automatically construct theme classes"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
