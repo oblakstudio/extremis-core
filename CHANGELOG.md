@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/oblakstudio/extremis-core/compare/v2.0.0...v2.1.0) (2023-08-10)
+
+
+### Features
+
+* Implemented Loader Trait ([896ab0e](https://github.com/oblakstudio/extremis-core/commit/896ab0eb5a0377e7db97600cd2634556c3d58bb1))
+
 # [2.0.0](https://github.com/oblakstudio/extremis-core/compare/v1.1.0...v2.0.0) (2023-07-27)
 
 
