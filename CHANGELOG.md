@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/oblakstudio/extremis-core/compare/v1.1.0...v2.0.0) (2023-07-27)
+
+
+### Bug Fixes
+
+* Fixed folder paths ([43f6b7b](https://github.com/oblakstudio/extremis-core/commit/43f6b7b804e736a005c6a1fce13f72ac6b5b7388))
+* Fixed merge conflict ([6da8444](https://github.com/oblakstudio/extremis-core/commit/6da8444017a850d20602ac52c7f6f4afb99c30e3))
+
+
+### Features
+
+* Reworked the core ([764661c](https://github.com/oblakstudio/extremis-core/commit/764661ca92d0ea44a8d0883cc121a4ef5b9f64d2))
+
+
+### BREAKING CHANGES
+
+* Complete rewrite
+
 # [1.1.0](https://github.com/oblakstudio/extremis-core/compare/v1.0.0...v1.1.0) (2022-02-06)
 
 
