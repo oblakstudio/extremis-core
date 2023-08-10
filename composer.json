@@ -8,7 +8,7 @@
             "Extremis\\": "src"
         },
         "files": [
-            "/src/Utils/extremis-helpers.php"
+            "src/Utils/extremis-helpers.php"
         ]
     },
     "require": {

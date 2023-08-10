@@ -8,11 +8,13 @@
 namespace Extremis;
 
 use Oblak\WP\Asset_Loader;
+use Oblak\WP\Loader_Trait;
 
 /**
  * Main child theme class
  */
 class Extremis {
+    use Loader_Trait;
 
     /**
      * Theme modules
@@ -86,7 +88,7 @@ class Extremis {
      * Initializes the asset loader.
      */
     public function init_asset_loader() {
-        ! empty( $this->assets ) && Asset_Loader::get_instance()->register_namespace( 'extremis', $this->assets );
+        ! empty( $this->assets ) && Asset_Loader::get_instance()->register_namespace( $this->namespace, $this->assets );
     }
 
     /**
@@ -129,26 +131,6 @@ class Extremis {
         }
 
         return array_filter( $classes );
-    }
-
-    /**
-     * Get the cache buster asset path
-     *
-     * @param  string $asset Asset path.
-     * @return string        Asset path with cache buster.
-     */
-    public function asset_path( string $asset ): string {
-        return Asset_Loader::get_instance()->get_path( 'extremis', $asset );
-    }
-
-    /**
-     * Get the cache buster asset uri
-     *
-     * @param  string $asset Asset uri.
-     * @return string        Asset uri with cache buster.
-     */
-    public function asset_uri( string $asset ): string {
-        return Asset_Loader::get_instance()->get_uri( 'extremis', $asset );
     }
 
     /**
