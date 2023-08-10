@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2e63d86e1e994934f591c8d9de0673d",
+    "content-hash": "5d33f2298f59323bd75bcf73b4bf84e9",
     "packages": [
         {
             "name": "oblak/wp-asset-loader",
