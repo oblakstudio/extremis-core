@@ -21,14 +21,21 @@ class Extremis {
      *
      * @var object[]
      */
-    private array $modules;
+    protected array $modules;
 
     /**
      * Asset config array
      *
      * @var array
      */
-    private array $assets;
+    protected array $assets;
+
+    /**
+     * Theme supports array
+     *
+     * @var string[]
+     */
+    protected array $supports = array();
 
     /**
      * Class instance
@@ -41,15 +48,24 @@ class Extremis {
      * Class constructor
      */
     private function __construct() {
-        $this->modules = file_exists( locate_template( '/config/modules.php' ) )
-            ? require locate_template( 'config/modules.php' )
-            : array();
-
-        $this->assets = file_exists( locate_template( '/config/assets.php' ) )
-            ? require locate_template( 'config/assets.php' )
-            : array();
+        $this->modules  = $this->load_config_file( 'modules' );
+        $this->assets   = $this->load_config_file( 'assets' );
+        $this->supports = $this->load_config_file( 'supports' );
 
         $this->init_hooks();
+    }
+
+    /**
+     * Loads a config file.
+     *
+     * @param  string $file Config file name.
+     * @return array|null  Config array, or null if not found.
+     */
+    protected function load_config_file( string $file ): array {
+        $basedir = get_stylesheet_directory();
+        $include = sprintf( '%s/config/%s.php', $basedir, $file );
+
+        return file_exists( $include ) ? require $include : array();
     }
 
     /**
@@ -71,7 +87,7 @@ class Extremis {
      * @return Extremis
      */
     public static function get_instance(): Extremis {
-        return self::$instance ?? self::$instance = new static(); //phpcs:ignore
+        return self::$instance ??= new static(); //phpcs:ignore
     }
 
     /**
