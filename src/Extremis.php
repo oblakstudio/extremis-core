@@ -9,19 +9,16 @@ namespace Extremis;
 
 use Oblak\WP\Asset_Loader;
 use Oblak\WP\Loader_Trait;
+use Oblak\WP\Traits\Hook_Processor_Trait;
+use Oblak\WP\Traits\Singleton_Trait;
 
 /**
  * Main child theme class
  */
 class Extremis {
     use Loader_Trait;
-
-    /**
-     * Theme modules
-     *
-     * @var object[]
-     */
-    private array $modules;
+    use Singleton_Trait;
+    use Hook_Processor_Trait;
 
     /**
      * Asset config array
@@ -31,51 +28,29 @@ class Extremis {
     private array $assets;
 
     /**
-     * Class instance
-     *
-     * @var Extremis
-     */
-    private static ?Extremis $instance = null;
-
-    /**
      * Class constructor
      */
     private function __construct() {
-        $this->modules = file_exists( locate_template( '/config/modules.php' ) )
-            ? require locate_template( 'config/modules.php' )
-            : array();
-
         $this->assets = file_exists( locate_template( '/config/assets.php' ) )
-            ? require locate_template( 'config/assets.php' )
+            ? require locate_template( '/config/assets.php' )
             : array();
 
-        $this->init_hooks();
+        $this->init( 'after_setup_theme', 0 );
     }
 
     /**
-     * Initializes the hooks.
+     * {@inheritDoc}
      */
-    private function init_hooks() {
-        add_action( 'after_setup_theme', array( $this, 'load_textdomain' ), 0 );
-        add_action( 'after_setup_theme', array( $this, 'init_asset_loader' ), 1 );
-        add_action( 'after_setup_theme', array( $this, 'init_modules' ), 2 );
-
-        add_action( 'widgets_init', array( $this, 'init_widgets' ) );
-
-        add_filter( 'body_class', array( $this, 'modify_body_class' ), 99, 1 );
-    }
-
-    /**
-     * Get class instance
-     *
-     * @return Extremis
-     */
-    public static function get_instance(): Extremis {
-        return self::$instance ?? self::$instance = new static(); //phpcs:ignore
+    protected function get_dependencies(): array {
+        return require_once locate_template( '/config/dependencies.php' );
     }
 
     /**
      * Loads the textdomain
+     *
+     * @hook     after_setup_theme
+     * @type     action
+     * @priority 1
      */
     public function load_textdomain() {
         load_child_theme_textdomain(
@@ -86,35 +61,30 @@ class Extremis {
 
     /**
      * Initializes the asset loader.
+     *
+     * @hook     after_setup_theme
+     * @type     action
+     * @priority 1
      */
     public function init_asset_loader() {
-        ! empty( $this->assets ) && Asset_Loader::get_instance()->register_namespace( $this->namespace, $this->assets );
-    }
-
-    /**
-     * Initializes the modules.
-     */
-    public function init_modules() {
-        foreach ( $this->modules as $module_name => $module_classname ) {
-            if ( ! is_admin() && str_contains( $module_name, 'admin' ) || str_contains( $module_name, 'widget' ) ) {
-                continue;
-            }
-
-            $this->modules[ $module_name ] = new $module_classname();
-        }
+        ! empty( $this->assets )
+        &&
+        Asset_Loader::get_instance()->register_namespace( $this->namespace, $this->assets );
     }
 
     /**
      * Initialies widgets
+     *
+     * @hook widgets_init
+     * @type action
      */
     public function init_widgets() {
-        foreach ( $this->modules as $module_name => $module_classname ) {
-            if ( ! str_contains( $module_name, 'widget' ) ) {
-                continue;
-            }
+        $widgets = array_filter(
+            $this->get_dependencies(),
+            fn( $d ) => str_contains( $d, 'Widget' )
+        );
 
-            register_widget( $module_classname );
-        }
+        array_walk( $widgets, 'register_widget' );
     }
 
     /**
@@ -122,6 +92,9 @@ class Extremis {
      *
      * @param  string[] $classes Current body classes.
      * @return string[]          Modified body classes.
+     *
+     * @hook body_class
+     * @type filter
      */
     public function modify_body_class( array $classes ): array {
         if ( is_single() || is_page() && ! is_front_page() ) {
@@ -131,15 +104,5 @@ class Extremis {
         }
 
         return array_filter( $classes );
-    }
-
-    /**
-     * Get the module class
-     *
-     * @param  string $module Module name.
-     * @return object|null    Module class, or null if not found.
-     */
-    public function get_module( string $module ): ?object {
-        return $this->modules[ $module ] ?? null;
     }
 }

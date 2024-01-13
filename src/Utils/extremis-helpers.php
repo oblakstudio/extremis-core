@@ -14,5 +14,5 @@ use Extremis\Extremis;
  * @return Extremis
  */
 function Extremis(): Extremis {
-    return Extremis::get_instance();
+    return Extremis::instance();
 }
