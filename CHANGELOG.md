@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/oblakstudio/extremis-core/compare/v3.0.2...v3.0.3) (2024-01-13)
+
+
+### Bug Fixes
+
+* Asset namespace fix ([a22df44](https://github.com/oblakstudio/extremis-core/commit/a22df442c37faf4d152696df5cbccdc3e5bc0645))
+
 ## [3.0.2](https://github.com/oblakstudio/extremis-core/compare/v3.0.1...v3.0.2) (2024-01-13)
 
 
