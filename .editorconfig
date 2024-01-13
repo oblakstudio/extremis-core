@@ -18,9 +18,3 @@ indent_size = 2
 
 [*.js]
 indent_size = 2
-
-[composer.json]
-indent_size = 4
-
-[phpcs.xml]
-indent_size = 4

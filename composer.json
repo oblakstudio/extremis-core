@@ -1,31 +1,31 @@
 {
-    "name": "oblak/extremis-core",
-    "description": "Core files for Extremis",
-    "license": "GPL-2.0-or-later",
-    "version": "3.0.0",
-    "autoload": {
-        "psr-4": {
-            "Extremis\\": "src"
-        },
-        "files": [
-            "src/Utils/extremis-helpers.php"
-        ]
+  "name": "oblak/extremis-core",
+  "description": "Core files for Extremis",
+  "license": "GPL-2.0-or-later",
+  "version": "3.0.0",
+  "autoload": {
+    "psr-4": {
+      "Extremis\\": "src"
     },
-    "require": {
-        "php": ">=8.0",
-        "oblak/wp-asset-loader": "^3.0.0",
-        "oblak/wp-hook-di": "^1.0"
-    },
-    "require-dev": {
-        "oblak/wordpress-coding-standard": "^1.0.1"
-    },
-    "suggest": {
-        "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
-    },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "oblak/composer-wp-di-finder-plugin": true
-        }
+    "files": [
+      "src/Utils/extremis-helpers.php"
+    ]
+  },
+  "require": {
+    "php": ">=8.0",
+    "oblak/wp-asset-loader": "^3.0",
+    "oblak/wp-hook-di": "^1.0"
+  },
+  "require-dev": {
+    "oblak/wordpress-coding-standard": "^1.0.1"
+  },
+  "suggest": {
+    "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "oblak/composer-wp-di-finder-plugin": true
     }
+  }
 }
