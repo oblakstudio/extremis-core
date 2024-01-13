@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/oblakstudio/extremis-core/compare/v3.0.1...v3.0.2) (2024-01-13)
+
+
+### Bug Fixes
+
+* Deps update ([e5332a6](https://github.com/oblakstudio/extremis-core/commit/e5332a62606ff70222865995a90456b4fc9038b2))
+
 ## [3.0.1](https://github.com/oblakstudio/extremis-core/compare/v3.0.0...v3.0.1) (2024-01-13)
 
 
