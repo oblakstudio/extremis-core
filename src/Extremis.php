@@ -31,7 +31,8 @@ class Extremis {
      * Class constructor
      */
     private function __construct() {
-        $this->assets = file_exists( locate_template( '/config/assets.php' ) )
+        $this->namespace = 'extremis';
+        $this->assets    = file_exists( locate_template( '/config/assets.php' ) )
             ? require locate_template( '/config/assets.php' )
             : array();
 
