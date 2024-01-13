@@ -42,7 +42,7 @@ class Extremis {
      * {@inheritDoc}
      */
     protected function get_dependencies(): array {
-        return require_once locate_template( '/config/dependencies.php' );
+        return require locate_template( '/config/dependencies.php' );
     }
 
     /**
