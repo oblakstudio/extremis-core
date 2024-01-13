@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/oblakstudio/extremis-core/compare/v2.1.0...v3.0.0) (2024-01-13)
+
+
+### Features
+
+* Reimplemented Core ([c7dd24d](https://github.com/oblakstudio/extremis-core/commit/c7dd24d84e1d1610932bd52fa582688bb51a835f))
+
+
+### BREAKING CHANGES
+
+* Uses WP-Hook-DI
+
 # [2.1.0](https://github.com/oblakstudio/extremis-core/compare/v2.0.0...v2.1.0) (2023-08-10)
 
 
