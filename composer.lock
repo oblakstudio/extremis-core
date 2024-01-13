@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0945ea6f55d0f0b9daf333af023dadb",
+    "content-hash": "c227092e64c27918d8009bbbe251fa61",
     "packages": [
         {
             "name": "automattic/jetpack-constants",
@@ -59,16 +59,16 @@
         },
         {
             "name": "oblak/wp-asset-loader",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-asset-loader.git",
-                "reference": "720a57ec1120fd67e9758f5a93afbbe1948b3cac"
+                "reference": "521095f114f1b90dde35c921a561562f800c7c17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/720a57ec1120fd67e9758f5a93afbbe1948b3cac",
-                "reference": "720a57ec1120fd67e9758f5a93afbbe1948b3cac",
+                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/521095f114f1b90dde35c921a561562f800c7c17",
+                "reference": "521095f114f1b90dde35c921a561562f800c7c17",
                 "shasum": ""
             },
             "require": {
@@ -93,9 +93,9 @@
             "description": "Simple Asset Loader for WordPress",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-asset-loader/issues",
-                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v3.0.1"
+                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v3.0.2"
             },
-            "time": "2024-01-04T19:19:19+00:00"
+            "time": "2024-01-13T15:05:36+00:00"
         },
         {
             "name": "oblak/wp-hook-di",
