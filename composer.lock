@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "854f1c46da6661b8d209bb7cfda7b415",
+    "content-hash": "0b9d926ca9b104715d16cbe82cf25036",
     "packages": [
         {
             "name": "automattic/jetpack-constants",
@@ -99,16 +99,16 @@
         },
         {
             "name": "oblak/wp-hook-di",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-hook-di.git",
-                "reference": "06d102066e9fcf746ace022a9039f3eb129e16d8"
+                "reference": "850f818d066daf603c833bf3d37ae64f8c898684"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/06d102066e9fcf746ace022a9039f3eb129e16d8",
-                "reference": "06d102066e9fcf746ace022a9039f3eb129e16d8",
+                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/850f818d066daf603c833bf3d37ae64f8c898684",
+                "reference": "850f818d066daf603c833bf3d37ae64f8c898684",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,8 @@
                 "oblak/wordpress-coding-standard": "^1"
             },
             "suggest": {
-                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package.",
+                "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
             },
             "type": "library",
             "autoload": {
@@ -144,22 +145,22 @@
             "description": "Simplifies the use of WordPress hooks by allowing you to use simple dependency injection.",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-hook-di/issues",
-                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v1.0.0"
+                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v1.0.1"
             },
-            "time": "2024-01-03T12:52:32+00:00"
+            "time": "2024-01-13T14:29:04+00:00"
         },
         {
             "name": "oblak/wp-polyfills",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-polyfills.git",
-                "reference": "b5444775f32b555b700a3f447dc2da99a5069ea3"
+                "reference": "1a3c2dacd55925653320f8abbcfb5056ccc686a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-polyfills/zipball/b5444775f32b555b700a3f447dc2da99a5069ea3",
-                "reference": "b5444775f32b555b700a3f447dc2da99a5069ea3",
+                "url": "https://api.github.com/repos/oblakstudio/wp-polyfills/zipball/1a3c2dacd55925653320f8abbcfb5056ccc686a5",
+                "reference": "1a3c2dacd55925653320f8abbcfb5056ccc686a5",
                 "shasum": ""
             },
             "require": {
@@ -175,6 +176,7 @@
             "autoload": {
                 "files": [
                     "src/oblak-polyfill-array.php",
+                    "src/oblak-polyfill-conditionals.php",
                     "src/oblak-polyfill-terms.php",
                     "src/oblak-polyfill-wpfs.php"
                 ],
@@ -195,9 +197,9 @@
             "description": "Various polyfills for WordPress.",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-polyfills/issues",
-                "source": "https://github.com/oblakstudio/wp-polyfills/tree/v1.1.0"
+                "source": "https://github.com/oblakstudio/wp-polyfills/tree/v1.2.0"
             },
-            "time": "2024-01-03T12:46:21+00:00"
+            "time": "2024-01-13T14:28:04+00:00"
         }
     ],
     "packages-dev": [
