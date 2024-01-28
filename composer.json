@@ -2,7 +2,6 @@
   "name": "oblak/extremis-core",
   "description": "Core files for Extremis",
   "license": "GPL-2.0-or-later",
-  "version": "3.0.2",
   "autoload": {
     "psr-4": {
       "Extremis\\": "src"
@@ -17,7 +16,8 @@
     "oblak/wp-hook-di": "^1.0"
   },
   "require-dev": {
-    "oblak/wordpress-coding-standard": "^1.0.1"
+    "oblak/wordpress-coding-standard": "^1.0.1",
+    "ergebnis/composer-normalize": "^2.31"
   },
   "suggest": {
     "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
@@ -25,7 +25,8 @@
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "oblak/composer-wp-di-finder-plugin": true
+      "oblak/composer-wp-di-finder-plugin": true,
+      "ergebnis/composer-normalize": true
     }
   }
 }

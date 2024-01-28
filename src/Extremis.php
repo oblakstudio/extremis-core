@@ -10,14 +10,14 @@ namespace Extremis;
 use Oblak\WP\Asset_Loader;
 use Oblak\WP\Loader_Trait;
 use Oblak\WP\Traits\Hook_Processor_Trait;
-use Oblak\WP\Traits\Singleton_Trait;
+use Oblak\WP\Traits\Singleton;
 
 /**
  * Main child theme class
  */
 class Extremis {
     use Loader_Trait;
-    use Singleton_Trait;
+    use Singleton;
     use Hook_Processor_Trait;
 
     /**
@@ -32,8 +32,8 @@ class Extremis {
      */
     private function __construct() {
         $this->namespace = 'extremis';
-        $this->assets    = file_exists( locate_template( '/config/assets.php' ) )
-            ? require locate_template( '/config/assets.php' )
+        $this->assets    = \file_exists( \locate_template( '/config/assets.php' ) )
+            ? require \locate_template( '/config/assets.php' )
             : array();
 
         $this->init( 'after_setup_theme', 0 );
@@ -43,7 +43,7 @@ class Extremis {
      * {@inheritDoc}
      */
     protected function get_dependencies(): array {
-        return require locate_template( '/config/dependencies.php' );
+        return require \locate_template( '/config/dependencies.php' );
     }
 
     /**
@@ -54,9 +54,9 @@ class Extremis {
      * @priority 1
      */
     public function load_textdomain() {
-        load_child_theme_textdomain(
-            defined( 'EXTREMIS_TEXTDOMAIN' ) ? EXTREMIS_TEXTDOMAIN : 'extremis',
-            get_stylesheet_directory() . '/languages'
+        \load_child_theme_textdomain(
+            \defined( 'EXTREMIS_TEXTDOMAIN' ) ? EXTREMIS_TEXTDOMAIN : 'extremis',
+            \get_stylesheet_directory() . '/languages',
         );
     }
 
@@ -80,12 +80,12 @@ class Extremis {
      * @type action
      */
     public function init_widgets() {
-        $widgets = array_filter(
+        $widgets = \array_filter(
             $this->get_dependencies(),
-            fn( $d ) => str_contains( $d, 'Widget' )
+            static fn( $d ) => \str_contains( $d, 'Widget' )
         );
 
-        array_walk( $widgets, 'register_widget' );
+        \array_walk( $widgets, 'register_widget' );
     }
 
     /**
@@ -98,12 +98,12 @@ class Extremis {
      * @type filter
      */
     public function modify_body_class( array $classes ): array {
-        if ( is_single() || is_page() && ! is_front_page() ) {
-            if ( ! in_array( basename( get_permalink() ), $classes, true ) ) {
-                $classes[] = basename( get_permalink() );
+        if ( \is_single() || \is_page() && ! \is_front_page() ) {
+            if ( ! \in_array( \basename( \get_permalink() ), $classes, true ) ) {
+                $classes[] = \basename( \get_permalink() );
             }
         }
 
-        return array_filter( $classes );
+        return \array_filter( $classes );
     }
 }
