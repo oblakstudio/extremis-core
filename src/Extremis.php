@@ -5,38 +5,63 @@
  * @package Extremis
  */
 
-namespace Extremis;
+namespace Oblak\WP;
 
+use Automattic\Jetpack\Constants;
 use Oblak\WP\Asset_Loader;
+use Oblak\WP\Decorators\Action;
+use Oblak\WP\Decorators\Filter;
 use Oblak\WP\Loader_Trait;
 use Oblak\WP\Traits\Hook_Processor_Trait;
-use Oblak\WP\Traits\Singleton;
+use XWP\Helper\Traits\Singleton;
 
 /**
  * Main child theme class
  */
 class Extremis {
-    use Loader_Trait;
     use Singleton;
+    use Loader_Trait;
     use Hook_Processor_Trait;
 
     /**
      * Asset config array
      *
-     * @var array
+     * @var array|false
      */
-    private array $assets;
+    private array|bool $assets;
 
     /**
      * Class constructor
      */
     private function __construct() {
-        $this->namespace = 'extremis';
-        $this->assets    = \file_exists( \locate_template( '/config/assets.php' ) )
-            ? require \locate_template( '/config/assets.php' )
-            : array();
+        $this->namespace = $this->get_namespace();
+        $this->assets    = $this->get_assets();
 
-        $this->init( 'after_setup_theme', 0 );
+        $this->init( 'after_setup_theme', -1 );
+    }
+
+    /**
+     * Returns the theme namespace
+     *
+     * @return string
+     */
+    protected function get_namespace(): string {
+        return Constants::get_constant( 'EXTREMIS_NAMESPACE' ) ?? 'extremis';
+    }
+
+    /**
+     * Returns the asset config array
+     *
+     * @return array|false
+     */
+    protected function get_assets(): array|bool {
+        $file = \locate_template( '/config/assets.php' );
+
+        if ( ! $file ) {
+            return false;
+        }
+
+        return require $file;
     }
 
     /**
@@ -47,38 +72,39 @@ class Extremis {
     }
 
     /**
-     * Loads the textdomain
-     *
-     * @hook     after_setup_theme
-     * @type     action
-     * @priority 1
+     * {@inheritDoc}
      */
+    public function run_hooks() {
+        \xwp_invoke_hooked_methods( $this );
+    }
+
+    /**
+     * Loads the textdomain
+     */
+    #[Action( tag: 'after_setup_theme', priority: 1 )]
     public function load_textdomain() {
         \load_child_theme_textdomain(
-            \defined( 'EXTREMIS_TEXTDOMAIN' ) ? EXTREMIS_TEXTDOMAIN : 'extremis',
+            Constants::get_constant( 'EXTREMIS_TEXTDOMAIN' ) ?? 'extremis',
             \get_stylesheet_directory() . '/languages',
         );
     }
 
     /**
      * Initializes the asset loader.
-     *
-     * @hook     after_setup_theme
-     * @type     action
-     * @priority 1
      */
+    #[Action( tag: 'after_setup_theme', priority: 1 )]
     public function init_asset_loader() {
-        ! empty( $this->assets )
-        &&
+        if ( ! $this->assets ) {
+            return;
+        }
+
         Asset_Loader::get_instance()->register_namespace( $this->namespace, $this->assets );
     }
 
     /**
      * Initialies widgets
-     *
-     * @hook widgets_init
-     * @type action
      */
+    #[Action( tag: 'widgets_init', priority: 10 )]
     public function init_widgets() {
         $widgets = \array_filter(
             $this->get_dependencies(),
@@ -93,10 +119,8 @@ class Extremis {
      *
      * @param  string[] $classes Current body classes.
      * @return string[]          Modified body classes.
-     *
-     * @hook body_class
-     * @type filter
      */
+    #[Filter( tag: 'body_class', priority: 10 )]
     public function modify_body_class( array $classes ): array {
         if ( \is_single() || \is_page() && ! \is_front_page() ) {
             if ( ! \in_array( \basename( \get_permalink() ), $classes, true ) ) {

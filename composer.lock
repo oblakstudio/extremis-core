@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47077de29f3d751578777341868984ea",
+    "content-hash": "27b00b6fc6a52bff750f62a330b4c6b6",
     "packages": [
         {
             "name": "automattic/jetpack-constants",
-            "version": "v2.0.0",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-constants.git",
-                "reference": "d4244e33d2d18902951af05ca5dbb689a23c9cdc"
+                "reference": "f5da87d3b7f80411b77aa58a7355733ea72295aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/d4244e33d2d18902951af05ca5dbb689a23c9cdc",
-                "reference": "d4244e33d2d18902951af05ca5dbb689a23c9cdc",
+                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/f5da87d3b7f80411b77aa58a7355733ea72295aa",
+                "reference": "f5da87d3b7f80411b77aa58a7355733ea72295aa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^4.0.0",
+                "automattic/jetpack-changelogger": "^4.2.4",
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.1.0"
             },
@@ -53,9 +53,9 @@
             ],
             "description": "A wrapper for defining constants in a more testable way.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-constants/tree/v2.0.0"
+                "source": "https://github.com/Automattic/jetpack-constants/tree/v2.0.3"
             },
-            "time": "2023-11-20T20:02:28+00:00"
+            "time": "2024-05-29T09:44:58+00:00"
         },
         {
             "name": "oblak/wp-asset-loader",
@@ -99,35 +99,34 @@
         },
         {
             "name": "oblak/wp-hook-di",
-            "version": "v1.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-hook-di.git",
-                "reference": "0a46de2875a53dac4cf1a8e435042a986dd1324a"
+                "reference": "bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/0a46de2875a53dac4cf1a8e435042a986dd1324a",
-                "reference": "0a46de2875a53dac4cf1a8e435042a986dd1324a",
+                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9",
+                "reference": "bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9",
                 "shasum": ""
             },
             "require": {
-                "automattic/jetpack-constants": "^2.0",
-                "oblak/wp-polyfills": "^1.0",
-                "php": ">= 8.0"
+                "automattic/jetpack-constants": "^2",
+                "php": ">=8.1",
+                "x-wp/hook-invoker": "^1"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.31",
                 "oblak/wordpress-coding-standard": "^1"
             },
             "suggest": {
-                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package.",
-                "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/Utils/oblak-wp-metadata-utils.php"
+                    "src/Utils/oblak-wp-metadata-utils.php",
+                    "src/Utils/oblak-wp-hook-utils.php"
                 ],
                 "psr-4": {
                     "Oblak\\WP\\": "src"
@@ -146,46 +145,35 @@
             "description": "Simplifies the use of WordPress hooks by allowing you to use simple dependency injection.",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-hook-di/issues",
-                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v1.0.2"
+                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v2.0.3"
             },
-            "time": "2024-01-25T00:08:57+00:00"
+            "time": "2024-06-19T21:35:38+00:00"
         },
         {
-            "name": "oblak/wp-polyfills",
-            "version": "v1.4.2",
+            "name": "x-wp/helper-classes",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oblakstudio/wp-polyfills.git",
-                "reference": "b5d433d81c97339abb6153bc8e1c3fe797815ae0"
+                "url": "https://github.com/x-wp/helper-classes.git",
+                "reference": "eedcf468f739d7f07ce727de8d2eda5351ff4ba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-polyfills/zipball/b5d433d81c97339abb6153bc8e1c3fe797815ae0",
-                "reference": "b5d433d81c97339abb6153bc8e1c3fe797815ae0",
+                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/eedcf468f739d7f07ce727de8d2eda5351ff4ba3",
+                "reference": "eedcf468f739d7f07ce727de8d2eda5351ff4ba3",
                 "shasum": ""
             },
             "require": {
-                "php": ">= 8.0 < 8.2"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.31",
-                "oblak/wordpress-coding-standard": "^1"
+                "php": ">=8.0",
+                "x-wp/helper-traits": "^1"
             },
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/oblak-polyfill-array.php",
-                    "src/oblak-polyfill-block.php",
-                    "src/oblak-polyfill-conditionals.php",
-                    "src/oblak-polyfill-filter.php",
-                    "src/oblak-polyfill-terms.php",
-                    "src/oblak-polyfill-wpfs.php"
-                ],
                 "psr-4": {
-                    "Oblak\\WP\\": "src/"
+                    "XWP\\Helper\\Classes\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -198,20 +186,186 @@
                     "email": "sibin.grasic@oblak.studio"
                 }
             ],
-            "description": "Various polyfills for WordPress.",
+            "description": "Generic abstraction related to xWP packages",
             "keywords": [
-                "compat",
-                "compatibility",
-                "polyfill",
-                "shim",
-                "shims",
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "extended-wp",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/x-wp/helper-classes/issues",
+                "source": "https://github.com/x-wp/helper-classes/tree/v1.4.0"
+            },
+            "time": "2024-06-25T21:05:07+00:00"
+        },
+        {
+            "name": "x-wp/helper-traits",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/helper-traits.git",
+                "reference": "b99bcb6f2fadeedba30fc63abe39aa8e88e0949f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/b99bcb6f2fadeedba30fc63abe39aa8e88e0949f",
+                "reference": "b99bcb6f2fadeedba30fc63abe39aa8e88e0949f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "XWP\\Helper\\Traits\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Various traits related to xWP packages",
+            "keywords": [
+                "contracts",
+                "decoupling",
+                "extended-wp",
+                "interfaces",
+                "interoperability",
+                "standards",
+                "traits"
+            ],
+            "support": {
+                "issues": "https://github.com/x-wp/helper-traits/issues",
+                "source": "https://github.com/x-wp/helper-traits/tree/v1.4.0"
+            },
+            "time": "2024-05-26T16:39:47+00:00"
+        },
+        {
+            "name": "x-wp/hook-contracts",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/hook-contracts.git",
+                "reference": "1c22d5220d35e32fa1eb7ddb7c44a67d34329737"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/hook-contracts/zipball/1c22d5220d35e32fa1eb7ddb7c44a67d34329737",
+                "reference": "1c22d5220d35e32fa1eb7ddb7c44a67d34329737",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "XWP\\Contracts\\Hook\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Generic abstraction related to xWP hooks",
+            "keywords": [
+                "HOOK",
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "extended-wp",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/x-wp/hook-contracts/issues",
+                "source": "https://github.com/x-wp/hook-contracts/tree/v1.2.0"
+            },
+            "time": "2024-05-08T00:18:53+00:00"
+        },
+        {
+            "name": "x-wp/hook-invoker",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/hook-invoker.git",
+                "reference": "c273e61c4d0f9d8138a8cc7d14dd8171cd79781d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/hook-invoker/zipball/c273e61c4d0f9d8138a8cc7d14dd8171cd79781d",
+                "reference": "c273e61c4d0f9d8138a8cc7d14dd8171cd79781d",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-constants": "^2.0",
+                "php": ">=8.1",
+                "x-wp/helper-classes": "^1.3",
+                "x-wp/hook-contracts": "^1"
+            },
+            "provide": {
+                "x-wp/hook-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "oblak/wordpress-coding-standard": "^1"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "XWP\\Hook\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Provides standardized way to declare and invoke WordPress hooks",
+            "keywords": [
+                "actions",
+                "extended-wp",
+                "filters",
+                "hook-manager",
+                "hooks",
                 "wordpress"
             ],
             "support": {
-                "issues": "https://github.com/oblakstudio/wp-polyfills/issues",
-                "source": "https://github.com/oblakstudio/wp-polyfills/tree/v1.4.2"
+                "issues": "https://github.com/x-wp/hook-manager/issues",
+                "source": "https://github.com/x-wp/hook-invoker/tree/v1.0.0"
             },
-            "time": "2024-01-24T06:00:19+00:00"
+            "time": "2024-08-02T13:46:49+00:00"
         }
     ],
     "packages-dev": [
@@ -294,528 +448,6 @@
             "time": "2023-01-05T11:28:13+00:00"
         },
         {
-            "name": "ergebnis/composer-normalize",
-            "version": "2.31.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "da1d18bcc2ca02111359c2c76fd938a907ba0a16"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/da1d18bcc2ca02111359c2c76fd938a907ba0a16",
-                "reference": "da1d18bcc2ca02111359c2c76fd938a907ba0a16",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^2.0.0",
-                "ergebnis/json": "^1.0.1",
-                "ergebnis/json-normalizer": "^4.1.0",
-                "ergebnis/json-printer": "^3.3.0",
-                "ext-json": "*",
-                "justinrainbow/json-schema": "^5.2.12",
-                "localheinz/diff": "^1.1.1",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
-            },
-            "require-dev": {
-                "composer/composer": "^2.5.5",
-                "ergebnis/license": "^2.1.0",
-                "ergebnis/php-cs-fixer-config": "^5.5.2",
-                "fakerphp/faker": "^1.21.0",
-                "infection/infection": "~0.26.19",
-                "phpunit/phpunit": "^9.6.7",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "rector/rector": "~0.15.25",
-                "symfony/filesystem": "^6.0.13",
-                "vimeo/psalm": "^5.9.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Ergebnis\\Composer\\Normalize\\NormalizePlugin",
-                "composer-normalize": {
-                    "indent-size": 2,
-                    "indent-style": "space"
-                },
-                "plugin-optional": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Composer\\Normalize\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides a composer plugin for normalizing composer.json.",
-            "homepage": "https://github.com/ergebnis/composer-normalize",
-            "keywords": [
-                "composer",
-                "normalize",
-                "normalizer",
-                "plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/composer-normalize/issues",
-                "security": "https://github.com/ergebnis/composer-normalize/blob/main/.github/SECURITY.md",
-                "source": "https://github.com/ergebnis/composer-normalize"
-            },
-            "time": "2023-05-02T14:10:33+00:00"
-        },
-        {
-            "name": "ergebnis/json",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/json.git",
-                "reference": "d66ea30060856d0729a4aa319a02752519ca63a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json/zipball/d66ea30060856d0729a4aa319a02752519ca63a0",
-                "reference": "d66ea30060856d0729a4aa319a02752519ca63a0",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.29.0",
-                "ergebnis/data-provider": "^1.2.0",
-                "ergebnis/license": "^2.1.0",
-                "ergebnis/php-cs-fixer-config": "^5.0.0",
-                "ergebnis/phpstan-rules": "^1.0.0",
-                "fakerphp/faker": "^1.20.0",
-                "infection/infection": "~0.26.16",
-                "phpunit/phpunit": "^9.5.27",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "vimeo/psalm": "^5.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "composer-normalize": {
-                    "indent-size": 2,
-                    "indent-style": "space"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Json\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides a Json value object for representing a valid JSON string.",
-            "homepage": "https://github.com/ergebnis/json",
-            "keywords": [
-                "json"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/json/issues",
-                "source": "https://github.com/ergebnis/json"
-            },
-            "time": "2022-12-10T22:38:50+00:00"
-        },
-        {
-            "name": "ergebnis/json-normalizer",
-            "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/json-normalizer.git",
-                "reference": "e38f8b27f908686b200e3bd68e1b7bdfb5d53061"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/e38f8b27f908686b200e3bd68e1b7bdfb5d53061",
-                "reference": "e38f8b27f908686b200e3bd68e1b7bdfb5d53061",
-                "shasum": ""
-            },
-            "require": {
-                "ergebnis/json": "^1.0.1",
-                "ergebnis/json-pointer": "^3.2.0",
-                "ergebnis/json-printer": "^3.3.0",
-                "ergebnis/json-schema-validator": "^4.0.0",
-                "ext-json": "*",
-                "justinrainbow/json-schema": "^5.2.12",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
-            },
-            "require-dev": {
-                "composer/semver": "^3.2.1",
-                "ergebnis/data-provider": "^1.3.0",
-                "ergebnis/license": "^2.1.0",
-                "ergebnis/php-cs-fixer-config": "^5.5.2",
-                "fakerphp/faker": "^1.21.0",
-                "infection/infection": "~0.26.19",
-                "phpunit/phpunit": "^9.6.7",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "rector/rector": "~0.15.25",
-                "symfony/filesystem": "^6.0.19",
-                "symfony/finder": "^6.0.19",
-                "vimeo/psalm": "^5.9.0"
-            },
-            "suggest": {
-                "composer/semver": "If you want to use ComposerJsonNormalizer or VersionConstraintNormalizer"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Json\\Normalizer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides generic and vendor-specific normalizers for normalizing JSON documents.",
-            "homepage": "https://github.com/ergebnis/json-normalizer",
-            "keywords": [
-                "json",
-                "normalizer"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/json-normalizer/issues",
-                "source": "https://github.com/ergebnis/json-normalizer"
-            },
-            "time": "2023-05-02T11:08:03+00:00"
-        },
-        {
-            "name": "ergebnis/json-pointer",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/json-pointer.git",
-                "reference": "861516ff5afa1aa8905fdf3361315909523a1bf8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-pointer/zipball/861516ff5afa1aa8905fdf3361315909523a1bf8",
-                "reference": "861516ff5afa1aa8905fdf3361315909523a1bf8",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.28.3",
-                "ergebnis/data-provider": "^1.2.0",
-                "ergebnis/license": "^2.1.0",
-                "ergebnis/php-cs-fixer-config": "^5.0.0",
-                "fakerphp/faker": "^1.20.0",
-                "infection/infection": "~0.26.16",
-                "phpunit/phpunit": "^9.5.26",
-                "psalm/plugin-phpunit": "~0.18.3",
-                "vimeo/psalm": "^4.30"
-            },
-            "type": "library",
-            "extra": {
-                "composer-normalize": {
-                    "indent-size": 2,
-                    "indent-style": "space"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Json\\Pointer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides JSON pointer as a value object.",
-            "homepage": "https://github.com/ergebnis/json-pointer",
-            "keywords": [
-                "RFC6901",
-                "json",
-                "pointer"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/json-pointer/issues",
-                "source": "https://github.com/ergebnis/json-pointer"
-            },
-            "time": "2022-11-28T17:03:31+00:00"
-        },
-        {
-            "name": "ergebnis/json-printer",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/json-printer.git",
-                "reference": "18920367473b099633f644f0ca6dc8794345148f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-printer/zipball/18920367473b099633f644f0ca6dc8794345148f",
-                "reference": "18920367473b099633f644f0ca6dc8794345148f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "ergebnis/license": "^2.0.0",
-                "ergebnis/php-cs-fixer-config": "^4.11.0",
-                "fakerphp/faker": "^1.20.0",
-                "infection/infection": "~0.26.6",
-                "phpunit/phpunit": "^9.5.26",
-                "psalm/plugin-phpunit": "~0.18.3",
-                "vimeo/psalm": "^4.30.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Json\\Printer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides a JSON printer, allowing for flexible indentation.",
-            "homepage": "https://github.com/ergebnis/json-printer",
-            "keywords": [
-                "formatter",
-                "json",
-                "printer"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/json-printer/issues",
-                "source": "https://github.com/ergebnis/json-printer"
-            },
-            "time": "2022-11-28T10:27:43+00:00"
-        },
-        {
-            "name": "ergebnis/json-schema-validator",
-            "version": "4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ergebnis/json-schema-validator.git",
-                "reference": "a6166272ac5691a9bc791f185841e5f92a6d4723"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-schema-validator/zipball/a6166272ac5691a9bc791f185841e5f92a6d4723",
-                "reference": "a6166272ac5691a9bc791f185841e5f92a6d4723",
-                "shasum": ""
-            },
-            "require": {
-                "ergebnis/json": "^1.0.0",
-                "ergebnis/json-pointer": "^3.2.0",
-                "ext-json": "*",
-                "justinrainbow/json-schema": "^5.2.12",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.21.0",
-                "ergebnis/data-provider": "^1.2.0",
-                "ergebnis/license": "^2.1.0",
-                "ergebnis/php-cs-fixer-config": "~5.0.0",
-                "fakerphp/faker": "^1.20.0",
-                "infection/infection": "~0.26.16",
-                "phpunit/phpunit": "~9.5.27",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "vimeo/psalm": "^5.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "composer-normalize": {
-                    "indent-size": 2,
-                    "indent-style": "space"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ergebnis\\Json\\SchemaValidator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "Provides a JSON schema validator, building on top of justinrainbow/json-schema.",
-            "homepage": "https://github.com/ergebnis/json-schema-validator",
-            "keywords": [
-                "json",
-                "schema",
-                "validator"
-            ],
-            "support": {
-                "issues": "https://github.com/ergebnis/json-schema-validator/issues",
-                "source": "https://github.com/ergebnis/json-schema-validator"
-            },
-            "time": "2022-12-10T14:50:15+00:00"
-        },
-        {
-            "name": "justinrainbow/json-schema",
-            "version": "v5.2.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
-                "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
-                "json-schema/json-schema-test-suite": "1.2.0",
-                "phpunit/phpunit": "^4.8.35"
-            },
-            "bin": [
-                "bin/validate-json"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JsonSchema\\": "src/JsonSchema/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Prieto Reis",
-                    "email": "bruno.p.reis@gmail.com"
-                },
-                {
-                    "name": "Justin Rainbow",
-                    "email": "justin.rainbow@gmail.com"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
-                }
-            ],
-            "description": "A library to validate a json schema.",
-            "homepage": "https://github.com/justinrainbow/json-schema",
-            "keywords": [
-                "json",
-                "schema"
-            ],
-            "support": {
-                "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/v5.2.13"
-            },
-            "time": "2023-09-26T02:20:38+00:00"
-        },
-        {
-            "name": "localheinz/diff",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/localheinz/diff.git",
-                "reference": "851bb20ea8358c86f677f5f111c4ab031b1c764c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/localheinz/diff/zipball/851bb20ea8358c86f677f5f111c4ab031b1c764c",
-                "reference": "851bb20ea8358c86f677f5f111c4ab031b1c764c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5 || ^8.0",
-                "symfony/process": "^4.2 || ^5"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
-                    "name": "Kore Nordmann",
-                    "email": "mail@kore-nordmann.de"
-                }
-            ],
-            "description": "Fork of sebastian/diff for use with ergebnis/composer-normalize",
-            "homepage": "https://github.com/localheinz/diff",
-            "keywords": [
-                "diff",
-                "udiff",
-                "unidiff",
-                "unified diff"
-            ],
-            "support": {
-                "source": "https://github.com/localheinz/diff/tree/main"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sebastianbergmann",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-07-06T04:49:32+00:00"
-        },
-        {
             "name": "oblak/wordpress-coding-standard",
             "version": "v1.1.1",
             "source": {
@@ -868,6 +500,54 @@
                 "source": "https://github.com/oblakstudio/wordpress-coding-standards/tree/v1.1.1"
             },
             "time": "2024-01-24T23:43:48+00:00"
+        },
+        {
+            "name": "php-stubs/wordpress-stubs",
+            "version": "v6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "reference": "86e8753e89d59849276dcdd91b9a7dd78bb4abe2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/86e8753e89d59849276dcdd91b9a7dd78bb4abe2",
+                "reference": "86e8753e89d59849276dcdd91b9a7dd78bb4abe2",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "nikic/php-parser": "^4.13",
+                "php": "^7.4 || ^8.0",
+                "php-stubs/generator": "^0.8.3",
+                "phpdocumentor/reflection-docblock": "^5.4.1",
+                "phpstan/phpstan": "^1.10.49",
+                "phpunit/phpunit": "^9.5",
+                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.0",
+                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
+                "symfony/polyfill-php80": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "keywords": [
+                "PHPStan",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.6.0"
+            },
+            "time": "2024-07-17T08:50:38+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -933,28 +613,28 @@
         },
         {
             "name": "phpcompatibility/phpcompatibility-paragonie",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibilityParagonie.git",
-                "reference": "bba5a9dfec7fcfbd679cfaf611d86b4d3759da26"
+                "reference": "293975b465e0e709b571cbf0c957c6c0a7b9a2ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityParagonie/zipball/bba5a9dfec7fcfbd679cfaf611d86b4d3759da26",
-                "reference": "bba5a9dfec7fcfbd679cfaf611d86b4d3759da26",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityParagonie/zipball/293975b465e0e709b571cbf0c957c6c0a7b9a2ac",
+                "reference": "293975b465e0e709b571cbf0c957c6c0a7b9a2ac",
                 "shasum": ""
             },
             "require": {
                 "phpcompatibility/php-compatibility": "^9.0"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "paragonie/random_compat": "dev-master",
                 "paragonie/sodium_compat": "dev-master"
             },
             "suggest": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
                 "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
             },
             "type": "phpcodesniffer-standard",
@@ -984,9 +664,24 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPCompatibility/PHPCompatibilityParagonie/issues",
+                "security": "https://github.com/PHPCompatibility/PHPCompatibilityParagonie/security/policy",
                 "source": "https://github.com/PHPCompatibility/PHPCompatibilityParagonie"
             },
-            "time": "2022-10-25T01:46:02+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/PHPCompatibility",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jrfnl",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/php_codesniffer",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-04-24T21:30:46+00:00"
         },
         {
             "name": "phpcompatibility/phpcompatibility-wp",
@@ -1180,17 +875,61 @@
             "time": "2023-07-16T21:39:41+00:00"
         },
         {
-            "name": "phpstan/phpdoc-parser",
-            "version": "1.25.0",
+            "name": "phpstan/extension-installer",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "bd84b629c8de41aa2ae82c067c955e06f1b00240"
+                "url": "https://github.com/phpstan/extension-installer.git",
+                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bd84b629c8de41aa2ae82c067c955e06f1b00240",
-                "reference": "bd84b629c8de41aa2ae82c067c955e06f1b00240",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
+                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php": "^7.2 || ^8.0",
+                "phpstan/phpstan": "^1.9.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2.0",
+                "phpstan/phpstan-strict-rules": "^0.11 || ^0.12 || ^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PHPStan\\ExtensionInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\ExtensionInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Composer plugin for automatic installation of PHPStan extensions",
+            "support": {
+                "issues": "https://github.com/phpstan/extension-installer/issues",
+                "source": "https://github.com/phpstan/extension-installer/tree/1.4.1"
+            },
+            "time": "2024-06-10T08:20:49+00:00"
+        },
+        {
+            "name": "phpstan/phpdoc-parser",
+            "version": "1.29.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "fcaefacf2d5c417e928405b71b400d4ce10daaf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fcaefacf2d5c417e928405b71b400d4ce10daaf4",
+                "reference": "fcaefacf2d5c417e928405b71b400d4ce10daaf4",
                 "shasum": ""
             },
             "require": {
@@ -1222,9 +961,114 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.25.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.1"
             },
-            "time": "2024-01-04T17:06:16+00:00"
+            "time": "2024-05-31T08:52:43+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.11.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "e370bcddadaede0c1716338b262346f40d296f82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e370bcddadaede0c1716338b262346f40d296f82",
+                "reference": "e370bcddadaede0c1716338b262346f40d296f82",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-08-01T16:25:18+00:00"
+        },
+        {
+            "name": "phpstan/phpstan-deprecation-rules",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan-deprecation-rules.git",
+                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
+                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "phpstan/phpstan": "^1.11"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "rules.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan rules for detecting usage of deprecated classes, methods, properties, constants and traits.",
+            "support": {
+                "issues": "https://github.com/phpstan/phpstan-deprecation-rules/issues",
+                "source": "https://github.com/phpstan/phpstan-deprecation-rules/tree/1.2.0"
+            },
+            "time": "2024-04-20T06:39:48+00:00"
         },
         {
             "name": "slevomat/coding-standard",
@@ -1372,6 +1216,428 @@
             "time": "2024-01-11T20:47:48+00:00"
         },
         {
+            "name": "swissspidy/phpstan-no-private",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swissspidy/phpstan-no-private.git",
+                "reference": "f7a1890e350c8d8bf26370426a971d7490ae4245"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swissspidy/phpstan-no-private/zipball/f7a1890e350c8d8bf26370426a971d7490ae4245",
+                "reference": "f7a1890e350c8d8bf26370426a971d7490ae4245",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "phpstan/phpstan": "^1.10.3"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/phpstan-php-parser": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "^8.8.0",
+                "squizlabs/php_codesniffer": "^3.5.3"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "rules.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Swissspidy\\PHPStan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan rules for detecting usage of pseudo-private functions, classes, and methods.",
+            "support": {
+                "issues": "https://github.com/swissspidy/phpstan-no-private/issues",
+                "source": "https://github.com/swissspidy/phpstan-no-private/tree/v0.2.1"
+            },
+            "time": "2024-06-05T10:03:17+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.30.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fd22ab50000ef01661e2a31d850ebaa297f8e03c",
+                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.30.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-06-19T12:30:46+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php73",
+            "version": "v1.30.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php73.git",
+                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/ec444d3f3f6505bb28d11afa41e75faadebc10a1",
+                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.30.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-05-31T15:07:36+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v6.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "a71cc3374f5fb9759da1961d28c452373b343dd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a71cc3374f5fb9759da1961d28c452373b343dd4",
+                "reference": "a71cc3374f5fb9759da1961d28c452373b343dd4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/console": "<5.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "^5.4|^6.0|^7.0",
+                "symfony/error-handler": "^6.3|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/process": "^5.4|^6.0|^7.0",
+                "symfony/uid": "^5.4|^6.0|^7.0",
+                "twig/twig": "^2.13|^3.0.4"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v6.4.10"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-07-26T12:30:32+00:00"
+        },
+        {
+            "name": "szepeviktor/phpstan-wordpress",
+            "version": "v1.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/szepeviktor/phpstan-wordpress.git",
+                "reference": "7f8cfe992faa96b6a33bbd75c7bace98864161e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/szepeviktor/phpstan-wordpress/zipball/7f8cfe992faa96b6a33bbd75c7bace98864161e7",
+                "reference": "7f8cfe992faa96b6a33bbd75c7bace98864161e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "php-stubs/wordpress-stubs": "^4.7 || ^5.0 || ^6.0",
+                "phpstan/phpstan": "^1.10.31",
+                "symfony/polyfill-php73": "^1.12.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.1.14",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "php-parallel-lint/php-parallel-lint": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.2",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.0",
+                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+            },
+            "suggest": {
+                "swissspidy/phpstan-no-private": "Detect usage of internal core functions, classes and methods"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SzepeViktor\\PHPStan\\WordPress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "WordPress extensions for PHPStan",
+            "keywords": [
+                "PHPStan",
+                "code analyse",
+                "code analysis",
+                "static analysis",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/szepeviktor/phpstan-wordpress/issues",
+                "source": "https://github.com/szepeviktor/phpstan-wordpress/tree/v1.3.5"
+            },
+            "time": "2024-06-28T22:27:19+00:00"
+        },
+        {
             "name": "wp-coding-standards/wpcs",
             "version": "3.0.1",
             "source": {
@@ -1444,7 +1710,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0"
+        "php": "~8.0.0 || ~8.1.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"

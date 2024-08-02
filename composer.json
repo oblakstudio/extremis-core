@@ -2,31 +2,44 @@
   "name": "oblak/extremis-core",
   "description": "Core files for Extremis",
   "license": "GPL-2.0-or-later",
+  "require": {
+    "php": "~8.0.0 || ~8.1.0",
+    "automattic/jetpack-constants": "^2.0",
+    "oblak/wp-asset-loader": "^3.0",
+    "oblak/wp-hook-di": "^1 || ^2",
+    "x-wp/helper-traits": "^1"
+  },
+  "require-dev": {
+    "oblak/wordpress-coding-standard": "^1",
+    "php-stubs/wordpress-stubs": "^6.5",
+    "phpstan/extension-installer": "^1.3",
+    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-deprecation-rules": "^1.1",
+    "swissspidy/phpstan-no-private": "^0.2.0",
+    "symfony/var-dumper": "^6.4",
+    "szepeviktor/phpstan-wordpress": "^1.3"
+  },
+  "suggest": {
+    "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use extremis dependencies.",
+    "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
+  },
   "autoload": {
     "psr-4": {
-      "Extremis\\": "src"
+      "Oblak\\WP\\": "src/"
     },
+    "classmap": [
+      "src/Compat/"
+    ],
     "files": [
       "src/Utils/extremis-helpers.php"
     ]
   },
-  "require": {
-    "php": ">=8.0",
-    "oblak/wp-asset-loader": "^3.0",
-    "oblak/wp-hook-di": "^1.0"
-  },
-  "require-dev": {
-    "oblak/wordpress-coding-standard": "^1.0.1",
-    "ergebnis/composer-normalize": "^2.31"
-  },
-  "suggest": {
-    "oblak/composer-wp-di-finder-plugin": "Automatically find Hookable classes"
-  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
       "oblak/composer-wp-di-finder-plugin": true,
-      "ergebnis/composer-normalize": true
+      "phpstan/extension-installer": true
     }
   }
 }

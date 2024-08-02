@@ -1,0 +1,11 @@
+parameters:
+  level: 5
+  paths:
+    - src
+  ignoreErrors:
+    -
+      messages:
+        - '#Call to deprecated function.+#'
+        - '#Attribute class Oblak.+#'
+      path: src/Extremis.php
+
