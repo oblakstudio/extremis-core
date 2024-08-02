@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27b00b6fc6a52bff750f62a330b4c6b6",
+    "content-hash": "72ee4312e671ae97f19e6ed68b0ec205",
     "packages": [
         {
             "name": "automattic/jetpack-constants",
@@ -59,20 +59,22 @@
         },
         {
             "name": "oblak/wp-asset-loader",
-            "version": "3.0.2",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-asset-loader.git",
-                "reference": "521095f114f1b90dde35c921a561562f800c7c17"
+                "reference": "8727a9e8ce2965a6ef17b386024ccd8b978d86be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/521095f114f1b90dde35c921a561562f800c7c17",
-                "reference": "521095f114f1b90dde35c921a561562f800c7c17",
+                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/8727a9e8ce2965a6ef17b386024ccd8b978d86be",
+                "reference": "8727a9e8ce2965a6ef17b386024ccd8b978d86be",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0"
+                "php": ">=8.0",
+                "x-wp/helper-classes": "^1",
+                "x-wp/helper-functions": "^1"
             },
             "require-dev": {
                 "oblak/wordpress-coding-standard": "^1"
@@ -82,8 +84,13 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/Utils/xwp-dep-loader-fns.php",
+                    "src/Utils/xwp-dep-loader-init.php"
+                ],
                 "psr-4": {
-                    "Oblak\\WP\\": "src"
+                    "Oblak\\WP\\": "src/Legacy/",
+                    "XWP\\Dependency\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -93,9 +100,9 @@
             "description": "Simple Asset Loader for WordPress",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-asset-loader/issues",
-                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v3.0.2"
+                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v4.0.0"
             },
-            "time": "2024-01-13T15:05:36+00:00"
+            "time": "2024-06-18T05:37:35+00:00"
         },
         {
             "name": "oblak/wp-hook-di",
@@ -201,6 +208,61 @@
                 "source": "https://github.com/x-wp/helper-classes/tree/v1.4.0"
             },
             "time": "2024-06-25T21:05:07+00:00"
+        },
+        {
+            "name": "x-wp/helper-functions",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/helper-functions.git",
+                "reference": "92731d8a7e3db5c8f34c6b71b887f27e8f0a0a55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/92731d8a7e3db5c8f34c6b71b887f27e8f0a0a55",
+                "reference": "92731d8a7e3db5c8f34c6b71b887f27e8f0a0a55",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xwp-helper-fns.php"
+                ],
+                "psr-4": {
+                    "XWP\\Helper\\Functions\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Various traits related to xWP packages",
+            "keywords": [
+                "contracts",
+                "decoupling",
+                "extended-wp",
+                "interfaces",
+                "interoperability",
+                "standards",
+                "traits"
+            ],
+            "support": {
+                "issues": "https://github.com/x-wp/helper-functions/issues",
+                "source": "https://github.com/x-wp/helper-functions/tree/v1.4.0"
+            },
+            "time": "2024-06-06T21:25:23+00:00"
         },
         {
             "name": "x-wp/helper-traits",
