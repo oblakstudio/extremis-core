@@ -6,7 +6,7 @@
  * @subpackage Utils
  */
 
-use Extremis\Extremis;
+use Oblak\WP\Extremis;
 
 /**
  * Returns the main instance of Extremis.
