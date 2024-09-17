@@ -20,13 +20,13 @@ use XWP\Helper\Traits\Singleton;
  */
 class Extremis {
     use Singleton;
-    use Loader_Trait;
+    use \XWP_Asset_Retriever;
     use Hook_Processor_Trait;
 
     /**
      * Asset config array
      *
-     * @var array|false
+     * @var array<string, mixed>|false
      */
     private array|bool $assets;
 
@@ -34,7 +34,7 @@ class Extremis {
      * Class constructor
      */
     private function __construct() {
-        $this->namespace = $this->get_namespace();
+        $this->bundle_id = $this->get_namespace();
         $this->assets    = $this->get_assets();
 
         $this->init( 'after_setup_theme', -1 );
@@ -52,7 +52,7 @@ class Extremis {
     /**
      * Returns the asset config array
      *
-     * @return array|false
+     * @return array<string,mixed>|false
      */
     protected function get_assets(): array|bool {
         $file = \locate_template( '/config/assets.php' );
@@ -61,7 +61,10 @@ class Extremis {
             return false;
         }
 
-        return require $file;
+        return \xwp_array_diff_assoc(
+            \array_merge( require $file, array( 'id' => $this->bundle_id ) ),
+            'namespace',
+        );
     }
 
     /**
@@ -98,7 +101,9 @@ class Extremis {
             return;
         }
 
-        Asset_Loader::get_instance()->register_namespace( $this->namespace, $this->assets );
+        ! isset( $this->assets['base_dir'] )
+            ? Asset_Loader::get_instance()->register_namespace( $this->bundle_id, $this->assets )
+            : \XWP_Asset_Loader::load_bundle( $this->assets );
     }
 
     /**
@@ -106,12 +111,13 @@ class Extremis {
      */
     #[Action( tag: 'widgets_init', priority: 10 )]
     public function init_widgets() {
-        $widgets = \array_filter(
-            $this->get_dependencies(),
-            static fn( $d ) => \str_contains( $d, 'Widget' )
-        );
+        foreach ( $this->get_dependencies() as $dep ) {
+            if ( ! \str_contains( $dep, 'Widget' ) ) {
+                continue;
+            }
 
-        \array_walk( $widgets, 'register_widget' );
+            \register_widget( $dep );
+        }
     }
 
     /**

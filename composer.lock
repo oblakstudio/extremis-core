@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27b00b6fc6a52bff750f62a330b4c6b6",
+    "content-hash": "b111a932dffc9457e1f96ff210677882",
     "packages": [
         {
             "name": "automattic/jetpack-constants",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-constants.git",
-                "reference": "f5da87d3b7f80411b77aa58a7355733ea72295aa"
+                "reference": "f6958c313a34c5e92171c45a57d9dc978e5975ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/f5da87d3b7f80411b77aa58a7355733ea72295aa",
-                "reference": "f5da87d3b7f80411b77aa58a7355733ea72295aa",
+                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/f6958c313a34c5e92171c45a57d9dc978e5975ed",
+                "reference": "f6958c313a34c5e92171c45a57d9dc978e5975ed",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^4.2.4",
+                "automattic/jetpack-changelogger": "^4.2.6",
                 "brain/monkey": "2.6.1",
-                "yoast/phpunit-polyfills": "1.1.0"
+                "yoast/phpunit-polyfills": "^1.1.1"
             },
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
@@ -53,37 +53,47 @@
             ],
             "description": "A wrapper for defining constants in a more testable way.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-constants/tree/v2.0.3"
+                "source": "https://github.com/Automattic/jetpack-constants/tree/v2.0.4"
             },
-            "time": "2024-05-29T09:44:58+00:00"
+            "time": "2024-08-23T14:28:14+00:00"
         },
         {
             "name": "oblak/wp-asset-loader",
-            "version": "3.0.2",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-asset-loader.git",
-                "reference": "521095f114f1b90dde35c921a561562f800c7c17"
+                "reference": "dc1599a1430b9cd20a8a5255093ea6bdac34aaba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/521095f114f1b90dde35c921a561562f800c7c17",
-                "reference": "521095f114f1b90dde35c921a561562f800c7c17",
+                "url": "https://api.github.com/repos/oblakstudio/wp-asset-loader/zipball/dc1599a1430b9cd20a8a5255093ea6bdac34aaba",
+                "reference": "dc1599a1430b9cd20a8a5255093ea6bdac34aaba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0"
+                "x-wp/asset-loader": "^1"
             },
             "require-dev": {
-                "oblak/wordpress-coding-standard": "^1"
+                "oblak/wordpress-coding-standard": "^1",
+                "php-stubs/wordpress-stubs": "^6.5",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "swissspidy/phpstan-no-private": "^0.2.0",
+                "szepeviktor/phpstan-wordpress": "^1.3"
             },
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/Utils/xwp-dep-loader-fns.php"
+                ],
                 "psr-4": {
-                    "Oblak\\WP\\": "src"
+                    "Oblak\\WP\\": "src/Legacy/",
+                    "XWP\\Dependency\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -93,22 +103,23 @@
             "description": "Simple Asset Loader for WordPress",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-asset-loader/issues",
-                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v3.0.2"
+                "source": "https://github.com/oblakstudio/wp-asset-loader/tree/v5.0.0"
             },
-            "time": "2024-01-13T15:05:36+00:00"
+            "abandoned": "x-wp/asset-loader",
+            "time": "2024-09-17T12:38:48+00:00"
         },
         {
             "name": "oblak/wp-hook-di",
-            "version": "v2.0.3",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-hook-di.git",
-                "reference": "bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9"
+                "reference": "e7a49e868cc44251ef479c53a8f6cb365a4749fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9",
-                "reference": "bfb65abc18b0c8bdaa8d0a270f1e7e2d128314e9",
+                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/e7a49e868cc44251ef479c53a8f6cb365a4749fe",
+                "reference": "e7a49e868cc44251ef479c53a8f6cb365a4749fe",
                 "shasum": ""
             },
             "require": {
@@ -145,22 +156,139 @@
             "description": "Simplifies the use of WordPress hooks by allowing you to use simple dependency injection.",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-hook-di/issues",
-                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v2.0.3"
+                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v2.1.0"
             },
-            "time": "2024-06-19T21:35:38+00:00"
+            "time": "2024-09-06T05:26:43+00:00"
         },
         {
-            "name": "x-wp/helper-classes",
-            "version": "v1.4.0",
+            "name": "psr/container",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/x-wp/helper-classes.git",
-                "reference": "eedcf468f739d7f07ce727de8d2eda5351ff4ba3"
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/eedcf468f739d7f07ce727de8d2eda5351ff4ba3",
-                "reference": "eedcf468f739d7f07ce727de8d2eda5351ff4ba3",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
+            },
+            "time": "2021-11-05T16:47:00+00:00"
+        },
+        {
+            "name": "x-wp/asset-loader",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/asset-loader.git",
+                "reference": "8198e2337bee579fc96a6f09e2c74fd745c98b6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/asset-loader/zipball/8198e2337bee579fc96a6f09e2c74fd745c98b6f",
+                "reference": "8198e2337bee579fc96a6f09e2c74fd745c98b6f",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-constants": "^2.0",
+                "php": ">=8.0",
+                "x-wp/helper-functions": "^1.9",
+                "x-wp/helper-traits": "^1.9"
+            },
+            "provide": {
+                "x-wp/asset-loader-implementation": "1.0"
+            },
+            "require-dev": {
+                "oblak/wordpress-coding-standard": "^1",
+                "php-stubs/wordpress-stubs": "^6.5",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "swissspidy/phpstan-no-private": "^0.2.0",
+                "szepeviktor/phpstan-wordpress": "^1.3"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Functions/xwp-loader-init.php"
+                ],
+                "psr-4": {
+                    "XWP\\Dependency\\": "src/"
+                },
+                "classmap": [
+                    "src/Core/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Simple Asset Loader for WordPress",
+            "support": {
+                "issues": "https://github.com/x-wp/asset-loader/issues",
+                "source": "https://github.com/x-wp/asset-loader/tree/v1.0.0"
+            },
+            "time": "2024-09-17T12:29:39+00:00"
+        },
+        {
+            "name": "x-wp/helper-classes",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/helper-classes.git",
+                "reference": "ec553f972ecb933e9ce374a74bc48482f8c82e14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/ec553f972ecb933e9ce374a74bc48482f8c82e14",
+                "reference": "ec553f972ecb933e9ce374a74bc48482f8c82e14",
                 "shasum": ""
             },
             "require": {
@@ -198,22 +326,78 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-classes/issues",
-                "source": "https://github.com/x-wp/helper-classes/tree/v1.4.0"
+                "source": "https://github.com/x-wp/helper-classes/tree/v1.9.0"
             },
-            "time": "2024-06-25T21:05:07+00:00"
+            "time": "2024-09-06T04:28:11+00:00"
         },
         {
-            "name": "x-wp/helper-traits",
-            "version": "v1.4.0",
+            "name": "x-wp/helper-functions",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/x-wp/helper-traits.git",
-                "reference": "b99bcb6f2fadeedba30fc63abe39aa8e88e0949f"
+                "url": "https://github.com/x-wp/helper-functions.git",
+                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/b99bcb6f2fadeedba30fc63abe39aa8e88e0949f",
-                "reference": "b99bcb6f2fadeedba30fc63abe39aa8e88e0949f",
+                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/951890a5352d2c293c086e20affb7aa6d8cc2fd8",
+                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "suggest": {
+                "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xwp-helper-fns.php",
+                    "xwp-helper-fns-req.php"
+                ],
+                "psr-4": {
+                    "XWP\\Helper\\Functions\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Sibin Grasic",
+                    "email": "sibin.grasic@oblak.studio"
+                }
+            ],
+            "description": "Various traits related to xWP packages",
+            "keywords": [
+                "contracts",
+                "decoupling",
+                "extended-wp",
+                "interfaces",
+                "interoperability",
+                "standards",
+                "traits"
+            ],
+            "support": {
+                "issues": "https://github.com/x-wp/helper-functions/issues",
+                "source": "https://github.com/x-wp/helper-functions/tree/v1.9.0"
+            },
+            "time": "2024-09-07T15:40:44+00:00"
+        },
+        {
+            "name": "x-wp/helper-traits",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-wp/helper-traits.git",
+                "reference": "485d1e932e133d2919756abd82d3d989b47e111a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/485d1e932e133d2919756abd82d3d989b47e111a",
+                "reference": "485d1e932e133d2919756abd82d3d989b47e111a",
                 "shasum": ""
             },
             "require": {
@@ -250,22 +434,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-traits/issues",
-                "source": "https://github.com/x-wp/helper-traits/tree/v1.4.0"
+                "source": "https://github.com/x-wp/helper-traits/tree/v1.9.0"
             },
-            "time": "2024-05-26T16:39:47+00:00"
+            "time": "2024-09-07T15:21:49+00:00"
         },
         {
             "name": "x-wp/hook-contracts",
-            "version": "v1.2.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/hook-contracts.git",
-                "reference": "1c22d5220d35e32fa1eb7ddb7c44a67d34329737"
+                "reference": "8aa2190f7cc49ff7c3075a42cbd727966127a4a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/hook-contracts/zipball/1c22d5220d35e32fa1eb7ddb7c44a67d34329737",
-                "reference": "1c22d5220d35e32fa1eb7ddb7c44a67d34329737",
+                "url": "https://api.github.com/repos/x-wp/hook-contracts/zipball/8aa2190f7cc49ff7c3075a42cbd727966127a4a9",
+                "reference": "8aa2190f7cc49ff7c3075a42cbd727966127a4a9",
                 "shasum": ""
             },
             "require": {
@@ -303,43 +487,55 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/hook-contracts/issues",
-                "source": "https://github.com/x-wp/hook-contracts/tree/v1.2.0"
+                "source": "https://github.com/x-wp/hook-contracts/tree/v1.5.0"
             },
-            "time": "2024-05-08T00:18:53+00:00"
+            "time": "2024-09-06T04:29:49+00:00"
         },
         {
             "name": "x-wp/hook-invoker",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/hook-invoker.git",
-                "reference": "c273e61c4d0f9d8138a8cc7d14dd8171cd79781d"
+                "reference": "2e4c947373726af601ad77ddb7774c2d0b9c72a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/hook-invoker/zipball/c273e61c4d0f9d8138a8cc7d14dd8171cd79781d",
-                "reference": "c273e61c4d0f9d8138a8cc7d14dd8171cd79781d",
+                "url": "https://api.github.com/repos/x-wp/hook-invoker/zipball/2e4c947373726af601ad77ddb7774c2d0b9c72a5",
+                "reference": "2e4c947373726af601ad77ddb7774c2d0b9c72a5",
                 "shasum": ""
             },
             "require": {
                 "automattic/jetpack-constants": "^2.0",
                 "php": ">=8.1",
+                "psr/container": "^2.0",
                 "x-wp/helper-classes": "^1.3",
+                "x-wp/helper-functions": "^1.6",
                 "x-wp/hook-contracts": "^1"
             },
             "provide": {
                 "x-wp/hook-implementation": "1.0.0"
             },
             "require-dev": {
-                "oblak/wordpress-coding-standard": "^1"
+                "oblak/wordpress-coding-standard": "^1",
+                "php-stubs/woocommerce-stubs": "^9.0",
+                "php-stubs/wordpress-stubs": "^6.5",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "swissspidy/phpstan-no-private": "^0.2.0",
+                "szepeviktor/phpstan-wordpress": "^1.3"
             },
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/Functions/xwp-hook-helper-fns.php"
+                ],
                 "psr-4": {
-                    "XWP\\Hook\\": "src"
+                    "XWP\\Hook\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -363,9 +559,9 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/hook-manager/issues",
-                "source": "https://github.com/x-wp/hook-invoker/tree/v1.0.0"
+                "source": "https://github.com/x-wp/hook-invoker/tree/v1.1.0"
             },
-            "time": "2024-08-02T13:46:49+00:00"
+            "time": "2024-09-06T05:08:22+00:00"
         }
     ],
     "packages-dev": [
@@ -876,22 +1072,22 @@
         },
         {
             "name": "phpstan/extension-installer",
-            "version": "1.4.1",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203"
+                "reference": "85e90b3942d06b2326fba0403ec24fe912372936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
-                "reference": "f6b87faf9fc7978eab2f7919a8760bc9f58f9203",
+                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/85e90b3942d06b2326fba0403ec24fe912372936",
+                "reference": "85e90b3942d06b2326fba0403ec24fe912372936",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.0",
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.9.0"
+                "phpstan/phpstan": "^1.9.0 || ^2.0"
             },
             "require-dev": {
                 "composer/composer": "^2.0",
@@ -912,24 +1108,28 @@
                 "MIT"
             ],
             "description": "Composer plugin for automatic installation of PHPStan extensions",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/phpstan/extension-installer/issues",
-                "source": "https://github.com/phpstan/extension-installer/tree/1.4.1"
+                "source": "https://github.com/phpstan/extension-installer/tree/1.4.3"
             },
-            "time": "2024-06-10T08:20:49+00:00"
+            "time": "2024-09-04T20:21:43+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.29.1",
+            "version": "1.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "fcaefacf2d5c417e928405b71b400d4ce10daaf4"
+                "reference": "51b95ec8670af41009e2b2b56873bad96682413e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fcaefacf2d5c417e928405b71b400d4ce10daaf4",
-                "reference": "fcaefacf2d5c417e928405b71b400d4ce10daaf4",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/51b95ec8670af41009e2b2b56873bad96682413e",
+                "reference": "51b95ec8670af41009e2b2b56873bad96682413e",
                 "shasum": ""
             },
             "require": {
@@ -961,22 +1161,22 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.30.1"
             },
-            "time": "2024-05-31T08:52:43+00:00"
+            "time": "2024-09-07T20:13:05+00:00"
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.9",
+            "version": "1.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e370bcddadaede0c1716338b262346f40d296f82"
+                "reference": "0fcbf194ab63d8159bb70d9aa3e1350051632009"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e370bcddadaede0c1716338b262346f40d296f82",
-                "reference": "e370bcddadaede0c1716338b262346f40d296f82",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0fcbf194ab63d8159bb70d9aa3e1350051632009",
+                "reference": "0fcbf194ab63d8159bb70d9aa3e1350051632009",
                 "shasum": ""
             },
             "require": {
@@ -1021,25 +1221,25 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-01T16:25:18+00:00"
+            "time": "2024-09-09T08:10:35+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-deprecation-rules.git",
-                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26"
+                "reference": "f94d246cc143ec5a23da868f8f7e1393b50eaa82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
-                "reference": "fa8cce7720fa782899a0aa97b6a41225d1bb7b26",
+                "url": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/f94d246cc143ec5a23da868f8f7e1393b50eaa82",
+                "reference": "f94d246cc143ec5a23da868f8f7e1393b50eaa82",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.11"
+                "phpstan/phpstan": "^1.12"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.2",
@@ -1066,9 +1266,9 @@
             "description": "PHPStan rules for detecting usage of deprecated classes, methods, properties, constants and traits.",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-deprecation-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-deprecation-rules/tree/1.2.0"
+                "source": "https://github.com/phpstan/phpstan-deprecation-rules/tree/1.2.1"
             },
-            "time": "2024-04-20T06:39:48+00:00"
+            "time": "2024-09-11T15:52:35+00:00"
         },
         {
             "name": "slevomat/coding-standard",
@@ -1335,20 +1535,20 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c"
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fd22ab50000ef01661e2a31d850ebaa297f8e03c",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/85181ba99b2345b0ef10ce42ecac37612d9fd341",
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-mbstring": "*"
@@ -1395,7 +1595,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.30.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -1411,24 +1611,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:30:46+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1"
+                "reference": "0f68c03565dcaaf25a890667542e8bd75fe7e5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/ec444d3f3f6505bb28d11afa41e75faadebc10a1",
-                "reference": "ec444d3f3f6505bb28d11afa41e75faadebc10a1",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/0f68c03565dcaaf25a890667542e8bd75fe7e5bb",
+                "reference": "0f68c03565dcaaf25a890667542e8bd75fe7e5bb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "type": "library",
             "extra": {
@@ -1471,7 +1671,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.30.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -1487,20 +1687,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v6.4.10",
+            "version": "v6.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "a71cc3374f5fb9759da1961d28c452373b343dd4"
+                "reference": "ee14c8254a480913268b1e3b1cba8045ed122694"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a71cc3374f5fb9759da1961d28c452373b343dd4",
-                "reference": "a71cc3374f5fb9759da1961d28c452373b343dd4",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ee14c8254a480913268b1e3b1cba8045ed122694",
+                "reference": "ee14c8254a480913268b1e3b1cba8045ed122694",
                 "shasum": ""
             },
             "require": {
@@ -1556,7 +1756,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v6.4.10"
+                "source": "https://github.com/symfony/var-dumper/tree/v6.4.11"
             },
             "funding": [
                 {
@@ -1572,7 +1772,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:30:32+00:00"
+            "time": "2024-08-30T16:03:21+00:00"
         },
         {
             "name": "szepeviktor/phpstan-wordpress",
@@ -1710,7 +1910,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.0.0 || ~8.1.0"
+        "php": ">=8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
