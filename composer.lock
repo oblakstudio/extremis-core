@@ -279,7 +279,7 @@
         },
         {
             "name": "x-wp/helper-classes",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-classes.git",
@@ -326,22 +326,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-classes/issues",
-                "source": "https://github.com/x-wp/helper-classes/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-classes/tree/v1.9.1"
             },
             "time": "2024-09-06T04:28:11+00:00"
         },
         {
             "name": "x-wp/helper-functions",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-functions.git",
-                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8"
+                "reference": "2f9ed127f62f37e1c87ccfd3153d551a5bcd3839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/951890a5352d2c293c086e20affb7aa6d8cc2fd8",
-                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8",
+                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/2f9ed127f62f37e1c87ccfd3153d551a5bcd3839",
+                "reference": "2f9ed127f62f37e1c87ccfd3153d551a5bcd3839",
                 "shasum": ""
             },
             "require": {
@@ -382,22 +382,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-functions/issues",
-                "source": "https://github.com/x-wp/helper-functions/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-functions/tree/v1.9.1"
             },
-            "time": "2024-09-07T15:40:44+00:00"
+            "time": "2024-09-18T12:43:44+00:00"
         },
         {
             "name": "x-wp/helper-traits",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-traits.git",
-                "reference": "485d1e932e133d2919756abd82d3d989b47e111a"
+                "reference": "0367d136d6ba36e2ae0fe1854584ef760ea7cae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/485d1e932e133d2919756abd82d3d989b47e111a",
-                "reference": "485d1e932e133d2919756abd82d3d989b47e111a",
+                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/0367d136d6ba36e2ae0fe1854584ef760ea7cae9",
+                "reference": "0367d136d6ba36e2ae0fe1854584ef760ea7cae9",
                 "shasum": ""
             },
             "require": {
@@ -434,9 +434,9 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-traits/issues",
-                "source": "https://github.com/x-wp/helper-traits/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-traits/tree/v1.9.1"
             },
-            "time": "2024-09-07T15:21:49+00:00"
+            "time": "2024-09-18T12:43:44+00:00"
         },
         {
             "name": "x-wp/hook-contracts",
