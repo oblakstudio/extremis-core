@@ -110,16 +110,16 @@
         },
         {
             "name": "oblak/wp-hook-di",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oblakstudio/wp-hook-di.git",
-                "reference": "e7a49e868cc44251ef479c53a8f6cb365a4749fe"
+                "reference": "3fe07f19b84ef12978f8eabdfb4ec5c7895b40da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/e7a49e868cc44251ef479c53a8f6cb365a4749fe",
-                "reference": "e7a49e868cc44251ef479c53a8f6cb365a4749fe",
+                "url": "https://api.github.com/repos/oblakstudio/wp-hook-di/zipball/3fe07f19b84ef12978f8eabdfb4ec5c7895b40da",
+                "reference": "3fe07f19b84ef12978f8eabdfb4ec5c7895b40da",
                 "shasum": ""
             },
             "require": {
@@ -156,9 +156,9 @@
             "description": "Simplifies the use of WordPress hooks by allowing you to use simple dependency injection.",
             "support": {
                 "issues": "https://github.com/oblakstudio/wp-hook-di/issues",
-                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v2.1.0"
+                "source": "https://github.com/oblakstudio/wp-hook-di/tree/v2.1.1"
             },
-            "time": "2024-09-06T05:26:43+00:00"
+            "time": "2024-09-30T09:00:02+00:00"
         },
         {
             "name": "psr/container",
@@ -279,16 +279,16 @@
         },
         {
             "name": "x-wp/helper-classes",
-            "version": "v1.9.0",
+            "version": "v1.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-classes.git",
-                "reference": "ec553f972ecb933e9ce374a74bc48482f8c82e14"
+                "reference": "451dff53964c2fbdf086882c868709e4e36fb1cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/ec553f972ecb933e9ce374a74bc48482f8c82e14",
-                "reference": "ec553f972ecb933e9ce374a74bc48482f8c82e14",
+                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/451dff53964c2fbdf086882c868709e4e36fb1cd",
+                "reference": "451dff53964c2fbdf086882c868709e4e36fb1cd",
                 "shasum": ""
             },
             "require": {
@@ -302,7 +302,10 @@
             "autoload": {
                 "psr-4": {
                     "XWP\\Helper\\Classes\\": ""
-                }
+                },
+                "classmap": [
+                    "WP/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -326,22 +329,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-classes/issues",
-                "source": "https://github.com/x-wp/helper-classes/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-classes/tree/v1.13.4"
             },
-            "time": "2024-09-06T04:28:11+00:00"
+            "time": "2024-09-23T14:31:15+00:00"
         },
         {
             "name": "x-wp/helper-functions",
-            "version": "v1.9.0",
+            "version": "v1.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-functions.git",
-                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8"
+                "reference": "93f6c928cd08192298e572a49873e3bd6b7aad49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/951890a5352d2c293c086e20affb7aa6d8cc2fd8",
-                "reference": "951890a5352d2c293c086e20affb7aa6d8cc2fd8",
+                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/93f6c928cd08192298e572a49873e3bd6b7aad49",
+                "reference": "93f6c928cd08192298e572a49873e3bd6b7aad49",
                 "shasum": ""
             },
             "require": {
@@ -382,9 +385,9 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-functions/issues",
-                "source": "https://github.com/x-wp/helper-functions/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-functions/tree/v1.13.4"
             },
-            "time": "2024-09-07T15:40:44+00:00"
+            "time": "2024-09-23T14:26:03+00:00"
         },
         {
             "name": "x-wp/helper-traits",
