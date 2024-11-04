@@ -388,16 +388,16 @@
         },
         {
             "name": "x-wp/helper-traits",
-            "version": "v1.9.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-traits.git",
-                "reference": "485d1e932e133d2919756abd82d3d989b47e111a"
+                "reference": "0367d136d6ba36e2ae0fe1854584ef760ea7cae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/485d1e932e133d2919756abd82d3d989b47e111a",
-                "reference": "485d1e932e133d2919756abd82d3d989b47e111a",
+                "url": "https://api.github.com/repos/x-wp/helper-traits/zipball/0367d136d6ba36e2ae0fe1854584ef760ea7cae9",
+                "reference": "0367d136d6ba36e2ae0fe1854584ef760ea7cae9",
                 "shasum": ""
             },
             "require": {
@@ -434,9 +434,9 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-traits/issues",
-                "source": "https://github.com/x-wp/helper-traits/tree/v1.9.0"
+                "source": "https://github.com/x-wp/helper-traits/tree/v1.18.1"
             },
-            "time": "2024-09-07T15:21:49+00:00"
+            "time": "2024-09-18T12:43:44+00:00"
         },
         {
             "name": "x-wp/hook-contracts",
@@ -1906,12 +1906,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
