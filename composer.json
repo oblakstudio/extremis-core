@@ -4,7 +4,7 @@
   "license": "GPL-2.0-or-later",
   "require": {
     "php": ">=8.0",
-    "automattic/jetpack-constants": "^2.0",
+    "automattic/jetpack-constants": "^3.0",
     "oblak/wp-asset-loader": "3 - 5",
     "oblak/wp-hook-di": "1 - 2",
     "x-wp/helper-traits": "^1"
