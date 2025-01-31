@@ -11,7 +11,7 @@
     "oblak/wordpress-coding-standard": "^1.2.6",
     "php-stubs/wordpress-stubs": "^6.7.1",
     "phpstan/extension-installer": "^1.4.3",
-    "phpstan/phpstan": "^1.12.16",
+    "phpstan/phpstan": "^2.0.0",
     "phpstan/phpstan-deprecation-rules": "^1.2.1",
     "swissspidy/phpstan-no-private": "^0.2.1",
     "symfony/var-dumper": "^6.4.18",
