@@ -441,16 +441,16 @@
         },
         {
             "name": "x-wp/di",
-            "version": "v1.5.3",
+            "version": "v1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/di.git",
-                "reference": "2ad099f61f8b73b678e7820de474287647f4eabc"
+                "reference": "21a26e76e405842460ab68f32dd4aedef0deef8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/di/zipball/2ad099f61f8b73b678e7820de474287647f4eabc",
-                "reference": "2ad099f61f8b73b678e7820de474287647f4eabc",
+                "url": "https://api.github.com/repos/x-wp/di/zipball/21a26e76e405842460ab68f32dd4aedef0deef8a",
+                "reference": "21a26e76e405842460ab68f32dd4aedef0deef8a",
                 "shasum": ""
             },
             "require": {
@@ -466,10 +466,7 @@
             },
             "provide": {
                 "psr/container-implementation": "^1.0",
-                "x-wp/di-implementation": "^1.0"
-            },
-            "replace": {
-                "x-wp/hook-invoker": "*"
+                "x-wp/di-implementation": "self.version"
             },
             "require-dev": {
                 "oblak/wordpress-coding-standard": "^1.1",
@@ -493,7 +490,10 @@
                 ],
                 "psr-4": {
                     "XWP\\DI\\": "src/"
-                }
+                },
+                "classmap": [
+                    "src/Core/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -505,7 +505,7 @@
                     "email": "sibin.grasic@oblak.studio"
                 }
             ],
-            "description": "Provides standardized way to declare and invoke WordPress hooks",
+            "description": "The dependency injection container for WordPress",
             "keywords": [
                 "actions",
                 "dependency-injection",
@@ -516,22 +516,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/hook-manager/issues",
-                "source": "https://github.com/x-wp/di/tree/v1.5.3"
+                "source": "https://github.com/x-wp/di/tree/v1.7.4"
             },
-            "time": "2025-01-30T22:48:02+00:00"
+            "time": "2025-02-05T17:03:52+00:00"
         },
         {
             "name": "x-wp/helper-classes",
-            "version": "v1.18.1",
+            "version": "v1.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-classes.git",
-                "reference": "451dff53964c2fbdf086882c868709e4e36fb1cd"
+                "reference": "a8d3424b875696c87d5dc26e73d66dbbb9992d74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/451dff53964c2fbdf086882c868709e4e36fb1cd",
-                "reference": "451dff53964c2fbdf086882c868709e4e36fb1cd",
+                "url": "https://api.github.com/repos/x-wp/helper-classes/zipball/a8d3424b875696c87d5dc26e73d66dbbb9992d74",
+                "reference": "a8d3424b875696c87d5dc26e73d66dbbb9992d74",
                 "shasum": ""
             },
             "require": {
@@ -572,22 +572,22 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-classes/issues",
-                "source": "https://github.com/x-wp/helper-classes/tree/v1.18.1"
+                "source": "https://github.com/x-wp/helper-classes/tree/v1.19.3"
             },
-            "time": "2024-09-23T14:31:15+00:00"
+            "time": "2025-02-05T15:40:56+00:00"
         },
         {
             "name": "x-wp/helper-functions",
-            "version": "v1.18.1",
+            "version": "v1.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-functions.git",
-                "reference": "edd258d0b2ad90a78893ffcabf6626cebf56a281"
+                "reference": "0430cff023ec47d99ed527501e5189ca799681c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/edd258d0b2ad90a78893ffcabf6626cebf56a281",
-                "reference": "edd258d0b2ad90a78893ffcabf6626cebf56a281",
+                "url": "https://api.github.com/repos/x-wp/helper-functions/zipball/0430cff023ec47d99ed527501e5189ca799681c5",
+                "reference": "0430cff023ec47d99ed527501e5189ca799681c5",
                 "shasum": ""
             },
             "require": {
@@ -630,13 +630,13 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-functions/issues",
-                "source": "https://github.com/x-wp/helper-functions/tree/v1.18.1"
+                "source": "https://github.com/x-wp/helper-functions/tree/v1.19.3"
             },
-            "time": "2024-11-04T00:58:34+00:00"
+            "time": "2025-02-01T19:59:36+00:00"
         },
         {
             "name": "x-wp/helper-traits",
-            "version": "v1.18.1",
+            "version": "v1.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/helper-traits.git",
@@ -682,7 +682,7 @@
             ],
             "support": {
                 "issues": "https://github.com/x-wp/helper-traits/issues",
-                "source": "https://github.com/x-wp/helper-traits/tree/v1.18.1"
+                "source": "https://github.com/x-wp/helper-traits/tree/v1.19.3"
             },
             "time": "2024-09-18T12:43:44+00:00"
         }
@@ -2078,12 +2078,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
