@@ -377,20 +377,20 @@
         },
         {
             "name": "x-wp/asset-loader",
-            "version": "v1.1.2",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/x-wp/asset-loader.git",
-                "reference": "ff156d8238de7efa81efb60f32f0435b48323d53"
+                "reference": "03aec6caaa239c9e52a19af99304f014c14adca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-wp/asset-loader/zipball/ff156d8238de7efa81efb60f32f0435b48323d53",
-                "reference": "ff156d8238de7efa81efb60f32f0435b48323d53",
+                "url": "https://api.github.com/repos/x-wp/asset-loader/zipball/03aec6caaa239c9e52a19af99304f014c14adca0",
+                "reference": "03aec6caaa239c9e52a19af99304f014c14adca0",
                 "shasum": ""
             },
             "require": {
-                "automattic/jetpack-constants": "^2.0",
+                "automattic/jetpack-constants": "^2 | ^3",
                 "php": ">=8.0",
                 "x-wp/helper-functions": "^1.18",
                 "x-wp/helper-traits": "^1.9"
@@ -435,9 +435,15 @@
             "description": "Simple Asset Loader for WordPress",
             "support": {
                 "issues": "https://github.com/x-wp/asset-loader/issues",
-                "source": "https://github.com/x-wp/asset-loader/tree/v1.1.2"
+                "source": "https://github.com/x-wp/asset-loader/tree/v1.2.0"
             },
-            "time": "2024-12-08T20:43:02+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/seebeen",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-05-13T16:58:49+00:00"
         },
         {
             "name": "x-wp/di",
@@ -2078,12 +2084,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.0"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
